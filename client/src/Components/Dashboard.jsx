@@ -19,7 +19,7 @@ function Dashboard() {
 
     try {
       if(token){
-      const res = await axios.get(`${process.env.API_URL}/dashboard` , { // req sent with header : auth method to verify the token on the incoming request 
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/dashboard` , { // req sent with header : auth method to verify the token on the incoming request 
         headers :{
           Authorization : `Bearer ${token}` // token sent back to backend to verify user
         }
