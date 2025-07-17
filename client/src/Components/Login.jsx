@@ -10,7 +10,7 @@ function Login() {
      const handleSubmit = async (e)=>{
         e.preventDefault()
         try{
-          const res =  await axios.post('http://localhost:3000/login'  , { email , password} )
+          const res =  await axios.post(`${process.env.API_URL}/login`  , { email , password} )
           if(res.data.success){
             console.log(res);
             setmsg('')

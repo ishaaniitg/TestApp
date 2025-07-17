@@ -10,7 +10,7 @@ function Reg() {
      const handleSubmit = async (e)=>{
         e.preventDefault()
         try{
-          const res =  await axios.post('http://localhost:3000/register'  , {name ,email , password} )
+          const res =  await axios.post(`${process.env.API_URL}/register`  , {name ,email , password} )
           if(res.data.success){
             console.log(res);
             navigate('/login')
