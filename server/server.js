@@ -17,7 +17,7 @@ const port = process.env.PORT || 3000 // either port from ENV or 3000
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-  origin: ['http://localhost:5173' , 'https://test-57mg65bih-ishaans-projects-50e969d3.vercel.app/'], // frontend port
+  origin: 'https://test-57mg65bih-ishaans-projects-50e969d3.vercel.app', // frontend port
   credentials: true
 })) // built middleware
 
